@@ -10,62 +10,79 @@ body {
     font-family: 'Lexend Deca', sans-serif;
     font-family: 'Big Shoulders Display';
     margin: 0;
+    
 }
-main { 
-    /* background-color: blue; */
+main {
     height: 100vh;
-        background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .grid-box { 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 0px;
-
-    margin: 0 auto;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    padding: 20px;
 }
 
 .grid-box div.orange {
     background-color: var(--Bright-orange);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+@media (max-width: 767px) { 
+    .grid-box div.orange { 
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 6px;
+    }
 }
 .grid-box div.blue {
     background-color: var(--Dark-cyan);
 }
 .grid-box div.bluedark {
     background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+@media (max-width: 767px) { 
+    .grid-box div.bluedark { 
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 6px;
+    }
 }
 
 .grid-box .box { 
-    padding: 20px 40px;
+    padding: 30px 40px;
+    position: relative;
 }
 .grid-box .box h1 {
     text-transform: uppercase;
     color: var(--Very-light-gray-background-headings-buttons);
-    
+    margin-top: 40px;
 }
 .grid-box .box p {
     color: var(--Transparent-white-paragraphs);
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
-    width: 100%;
-    background-color: red;
+    width: 85%;
+    margin-top: 40px;
+    line-height: 1.8;
 }
 .grid-box .box button { 
-    margin-top: 80px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     padding: 10px 30px;
     border: none;
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1rem;
     cursor: pointer;
 }
-.orange { 
+button.orange { 
     color: var(--Bright-orange);
 }
-.blue { 
+button.blue { 
     color: var(--Dark-cyan);
 }
-.bluedark { 
+button.bluedark { 
     color: var(--Very-dark-cyan);
 }
 .grid-box .box button:hover { 
