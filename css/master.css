@@ -73,6 +73,7 @@ main {
     padding: 10px 30px;
     border: none;
     background-color: white;
+    border: 1px solid white;
     border-radius: 1rem;
     cursor: pointer;
 }
@@ -87,7 +88,6 @@ button.bluedark {
 }
 .grid-box .box button:hover { 
     background-color: transparent;
-    border: 1px solid white;
     color: white;
 }
 @media (max-width: 767px) { 
