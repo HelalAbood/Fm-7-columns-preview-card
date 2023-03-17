@@ -90,3 +90,9 @@ button.bluedark {
     border: 1px solid white;
     color: white;
 }
+@media (max-width: 767px) { 
+    .grid-box .box button { 
+        margin-top: -10px;
+        padding: 10px 25px;
+    }
+}
